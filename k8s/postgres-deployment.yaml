@@ -23,4 +23,6 @@ spec:
             - containerPort: 5432
           volumeMounts: #how to mount in container
             - name: postgres-storage #identical to volume name
+              mountPath: /var/lib/postgresql/data
+              subPath: postgres #data inside container mountPath inside folder in PVC
       
