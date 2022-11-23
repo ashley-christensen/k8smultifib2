@@ -13,7 +13,7 @@ spec:
         component: postgres
     spec:
     volumes: 
-        - name: postgres-storage #lais out to request on pod requirements laid out below
+        - name: postgres-storage #lays out to request on pod requirements laid out below with accessMode and storage
           persistentVolumeClaim:
             claimName: database-persistent-volume-claim
       containers:
@@ -21,4 +21,6 @@ spec:
           image: postgres
           ports:
             - containerPort: 5432
+          volumeMounts: #how to mount in container
+            - name: postgres-storage #identical to volume name
       
