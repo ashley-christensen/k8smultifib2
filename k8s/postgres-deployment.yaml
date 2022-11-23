@@ -13,7 +13,7 @@ spec:
         component: postgres
     spec:
     volumes: 
-        - name: postgres-storage
+        - name: postgres-storage #lais out to request on pod requirements laid out below
           persistentVolumeClaim:
             claimName: database-persistent-volume-claim
       containers:
