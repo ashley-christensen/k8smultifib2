@@ -27,4 +27,8 @@ spec:
               subPath: postgres #data inside container mountPath inside folder in PVC
           env: 
             - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: pgpassword
+                  key: PGPASSWORD
       
