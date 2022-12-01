@@ -19,4 +19,4 @@ spec:
                       - name: REDIS_HOST #tell worker how to connect to redis
                         value: redis-cluster-ip-service #name of cluster ip service
                       - name: REDIS_PORT
-                        value: 6379
+                        value: '6379'
